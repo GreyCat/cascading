@@ -769,6 +769,8 @@ public class Tuple implements Comparable, Iterable, Serializable
 
       if( element instanceof Tuple )
         ( (Tuple) element ).print( buffer );
+      else if( element == null )
+        buffer.append("null");
       else
         buffer.append( "\'" ).append( element ).append( "\'" );
 
